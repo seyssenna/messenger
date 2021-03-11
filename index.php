@@ -17,11 +17,11 @@
     <div id="container">
         <div id="chatbox">
             <div id="chatdata">
-        
-            
+            <!-- display message here -->
             </div>
         </div>
     </div>
+
     <form action="" class="login-form" method="POST">
         <?php
             // if($error){
@@ -32,6 +32,7 @@
         <textarea name="message" placeholder="Enter Message"></textarea>
         <input type="submit" name="submit" value="Send!">
     </form>
+    
     <script src='get_all_message.js'></script>
 </body>
 </html>

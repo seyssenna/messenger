@@ -1,5 +1,5 @@
 <?php
-// header('Content-type:application/json;charset=utf-8');
+// to say to the API(this page: traitement.php) to accept connexion from AJAX
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 
@@ -13,8 +13,11 @@ if (isset($_POST['submit'])) {
     create_message($user, $message);
 }
 
+// stock the return value of get_all_message()
 $allMessage = get_all_message();
-// var_dump($allMessage);
+
+// translate the value into json (the values as to an "tableau associatif")
+// this is the value that will be read by "fetch" in the JS file
 echo json_encode($allMessage);
 
 
