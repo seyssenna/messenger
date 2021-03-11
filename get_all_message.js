@@ -28,5 +28,5 @@ function showMessage()
         ;
 }
 
-// fuction for reload/re-show the messages every 4 secondes 
-setInterval(showMessage, 4000);
+// fuction that re-call "showMessage()" every 4 secondes 
+setInterval(showMessage, 2000);

@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
     <h1>Welcome to Mychat</h1>
     <div id="container">
         <div id="chatbox">
@@ -22,17 +21,18 @@
         </div>
     </div>
 
-    <form action="" class="login-form" method="POST">
-        <?php
-            // if($error){
-            //     echo $error;
-            // }
-        ?>
-        <input type="text" name ="name", placeholder="Enter Name">
-        <textarea name="message" placeholder="Enter Message"></textarea>
-        <input type="submit" name="submit" value="Send!">
+
+
+    <form action="./config/traitement.php" class="login-form">
+        <input id="name" type="text" placeholder="Enter Name">
+        <textarea id="message" placeholder="Enter Message"></textarea>
+        <input id="button" type="submit" value="Send!">
     </form>
     
-    <script src='get_all_message.js'></script>
+    <?php require "config/traitement.php"; ?>
+
+
+    <!-- <script src='get_all_message.js'></script> -->
+    <script src='send-message.js'></script>
 </body>
 </html>
