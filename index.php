@@ -8,37 +8,30 @@
     <title>My chat</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css">
+    
 </head>
 
 <body>
-<?php require './config/traitement.php' ?>
+
     <h1>Welcome to Mychat</h1>
     <div id="container">
         <div id="chatbox">
             <div id="chatdata">
-            <?php 
-            
-            foreach ($allMessage as $key) {
-                echo <<< HTML
-                <span style="color:green;">$key[user] : </span> 
-                <span style="color:brown;">$key[message]</span>
-                <br>
-HTML;
-            } ?>
+        
             
             </div>
         </div>
     </div>
     <form action="" class="login-form" method="POST">
         <?php
-            if($error){
-                echo $error;
-            }
+            // if($error){
+            //     echo $error;
+            // }
         ?>
         <input type="text" name ="name", placeholder="Enter Name">
         <textarea name="message" placeholder="Enter Message"></textarea>
         <input type="submit" name="submit" value="Send!">
     </form>
-
+    <script src='get_all_message.js'></script>
 </body>
 </html>

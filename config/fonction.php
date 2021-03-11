@@ -2,7 +2,7 @@
 if (!function_exists("create_message")) {
     function create_message(string $name, string $mes): bool
     {
-        require "./database/connect.php";
+        require "../database/connect.php";
         $sql = 'INSERT INTO conversation (user, message) VALUES (:user, :message)';
         $newUser = $db->prepare($sql);
         $newUser->bindValue(":user", $name, PDO::PARAM_STR);
@@ -15,11 +15,11 @@ if (!function_exists("create_message")) {
 if (!function_exists('get_all_message')) {
     function get_all_message(): array
     {
-        require "./database/connect.php";
-        $sql = 'SELECT * FROM conversation ORDER BY id' ;
+        require "../database/connect.php";
+        $sql = 'SELECT * FROM conversation ORDER BY id DESC' ;
         $getMessage = $db->prepare($sql);
         $getMessage->execute();
-        $allMessage= $getMessage->fetchAll();
+        $allMessage= $getMessage->fetchAll(PDO::FETCH_ASSOC);
         return $allMessage;
     } 
 }
