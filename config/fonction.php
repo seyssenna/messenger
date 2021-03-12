@@ -16,7 +16,7 @@ if (!function_exists('get_all_message')) {
     function get_all_message(): array
     {
         require "../database/connect.php";
-        $sql = 'SELECT * FROM conversation ORDER BY id DESC' ;
+        $sql = 'SELECT * FROM conversation ORDER BY id ASC' ;
         $getMessage = $db->prepare($sql);
         $getMessage->execute();
         $allMessage= $getMessage->fetchAll(PDO::FETCH_ASSOC);

@@ -3,6 +3,8 @@ const url = "http://localhost:8888/simplon/php/chat-application/config/traitemen
 
 // message container selection
 let chatContainer = document.querySelector('#chatdata');
+let chatboxscroll = document.querySelector('#chatbox');
+
 
 // iterator: just to show on the console if it work 
 let i = 0;
@@ -24,9 +26,11 @@ function showMessage()
         })
         .catch((erreur) => {
             console.log(erreur);
-        })
-        ;
+        });
+        // fix the scroll on the bottom of the chatbox
+        chatboxscroll.scrollTop = chatboxscroll.scrollHeight;
 }
+
 
 // showMessage();
 // fuction that re-call "showMessage()" every 4 secondes 
