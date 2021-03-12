@@ -28,5 +28,6 @@ function showMessage()
         ;
 }
 
+// showMessage();
 // fuction that re-call "showMessage()" every 4 secondes 
-setInterval(showMessage, 2000);
+setInterval(showMessage, 1000);

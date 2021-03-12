@@ -22,17 +22,17 @@
     </div>
 
 
-
-    <form action="./config/traitement.php" class="login-form">
+    <!-- formulaire d'envoi -->
+    <form class="login-form">
         <input id="name" type="text" placeholder="Enter Name">
         <textarea id="message" placeholder="Enter Message"></textarea>
         <input id="button" type="submit" value="Send!">
     </form>
-    
-    <?php require "config/traitement.php"; ?>
 
 
-    <!-- <script src='get_all_message.js'></script> -->
+    <script src='get_all_message.js'></script>
     <script src='send-message.js'></script>
+    
+    
 </body>
 </html>
