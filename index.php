@@ -24,8 +24,8 @@
 
     <!-- formulaire d'envoi -->
     <form class="login-form">
-        <input id="name" type="text" placeholder="Enter Name">
-        <textarea id="message" placeholder="Enter Message"></textarea>
+        <input id="name" type="text" placeholder="Enter Name" required>
+        <textarea id="message" placeholder="Enter Message" required></textarea>
         <input id="button" type="submit" value="Send!">
     </form>
 
